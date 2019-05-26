@@ -1,0 +1,3 @@
+Request Handlers: Attach Resources
+
+We may attach resources to gres, a global resource object. Resources may be strings, binary data, or json structures. In order to do so we need to define ./src/lib/res.js for manipulating gres via curl.
