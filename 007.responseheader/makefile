@@ -12,5 +12,6 @@ POST:
 		--insecure \
 		$(URL) \
 		-H "Content-type: application/javascript" \
+		-v \
 		--data-binary @$(SRC) \
 		--output -
