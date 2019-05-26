@@ -1,0 +1,3 @@
+Request Handlers: HTML Pages
+
+Resources attached to the global json object may include web resources like html pages, css, and javascript. Here we replace the home page with html,css, and js values from the gres json object
