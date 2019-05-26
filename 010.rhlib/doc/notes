@@ -1,0 +1,3 @@
+Request Handlers: Attach Functions
+
+./src/main.js starts a request handler at rhtest. The request handler tests for POSTS with application/javascript content types and executes this. If this is not the case it executes glib.ctl, which is not defined yet. You can post a definition for glib.ctl to rhtest by defining it int ./src/lib. The makefile will automatically post it to rhtest. You can extend the functionality of the request handler at runtime in this fashion.
