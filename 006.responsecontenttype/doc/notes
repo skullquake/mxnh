@@ -1,0 +1,3 @@
+Set Response Content Type
+
+We can use the response object setContentType() member function to set the content type of the reponse

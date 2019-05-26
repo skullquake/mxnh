@@ -1,0 +1,3 @@
+Reading URL Parameters
+
+We can use the request object to obtain the URL parameters

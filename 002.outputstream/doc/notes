@@ -1,0 +1,7 @@
+Outputstream example
+
+Mendix request handler can differentiate between return value/no return value. If no return value is produced by the script, the request handler will not respond with the value.
+
+Available in the script's context is the servlet request (req) and response (res) objects, as well as the outputstream (os) for convenience (the outputstream may be acquired by the response object).
+
+Apache IOUtils is used to ease manipulation of writing to the outputstream.

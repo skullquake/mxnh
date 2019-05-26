@@ -1,0 +1,3 @@
+"Importing" Classes
+
+Native java classes may be used by writing out their fully qualified names, but it is also possible to "import" them using the Java.class() function

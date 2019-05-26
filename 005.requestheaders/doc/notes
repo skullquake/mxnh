@@ -1,0 +1,3 @@
+Reading Request Header
+
+We can use the request object to obtain the request headers
