@@ -18,8 +18,8 @@ TGTMAIN=./src/main.js.timestamp
 SRCLIB=$(filter-out %.timestamp,$(shell find -L ./src/lib -name '*.js'))
 TGTLIB=$(patsubst ./src/lib/%,./src/lib/%.timestamp, $(SRCLIB))
 	# DATA
-SRCDAT=$(filter-out %.timestamp,$(shell find -L ./data -name '*'))
-TGTDAT=$(patsubst ./data/%,./data/%.timestamp, $(SRCDAT))
+SRCDAT=$(filter-out %.timestamp,$(shell find -L ./res -name '*'))
+TGTDAT=$(patsubst ./res/%,./res/%.timestamp, $(SRCDAT))
 all:\
 	$(TGTLIB)\
 	$(TGTDAT)\
@@ -34,7 +34,7 @@ all:\
 			--output - &&\
 		touch $@ \
 	)
-./data/%.timestamp:./data/% $(TGTMAIN)
+./res/%.timestamp:./res/% $(TGTMAIN)
 	@( \
 		$(CURL) \
 			--insecure \

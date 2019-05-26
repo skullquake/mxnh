@@ -61,16 +61,19 @@ try{
 	glib.resopen=function(req,res,os){
 		var k=req.getParameter("key");
 		if(k!=null&&k!=''){
-			res.setContentType('text/plain');
 			try{
+
+				res.setContentType(glib.filename2mimetype(k));
 				IOUtils.write(
 					globaldata[k],
 					os
 				);
 			}catch(e){
+				res.setContentType('text/plain');
 				IOUtils.write(e,os);
 			}
 		}else{
+			res.setContentType('text/plain');
 			IOUtils.write('No Key',os);
 		}
 		IOUtils.closeQuietly(os);
