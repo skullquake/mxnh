@@ -1,0 +1,3 @@
+Request Handlers: Mime Types
+
+Resources attached to the global json object containing our resources may be binary. In order to serve them up we can create a simple mimetype detection function that inspects the "file name" (key in the resources json structure)
