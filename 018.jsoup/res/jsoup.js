@@ -47,26 +47,29 @@ try{
 	var scriptElements=doc.getElementsByTag("script");
 	scriptElements.forEach(
 		function(a){
-		var nashorn=new ScriptEngineManager().getEngineByName("nashorn");
-			var nashorn=new ScriptEngineManager().getEngineByName("nashorn");
-			try{
-				engine.eval(
-					a.dataNodes()[0].toString(),
-					{
-						'req':req,
-						'res':res,
-						'os':os,
-						'cl':cl,
-						'doc':doc,
-						'this':a
-					}
-				);
-				//clear contents
-				a.html('');
-			}catch(e){
-				a.html(e);
+			var type=a.attr("type");
+			if(type.contentEquals("text/nashorn")){
+				var nashorn=new ScriptEngineManager().getEngineByName("nashorn");
+				var nashorn=new ScriptEngineManager().getEngineByName("nashorn");
+				try{
+					engine.eval(
+						a.dataNodes()[0].toString(),
+						{
+							'req':req,
+							'res':res,
+							'os':os,
+							'cl':cl,
+							'doc':doc,
+							'this':a
+						}
+					);
+					//clear contents
+					a.html('');
+				}catch(e){
+					a.html(e);
+				}
+				a.unwrap();
 			}
-			a.unwrap();
 		}
 	);
 	IOUtils.write(doc,os);
