@@ -1,2 +1,3 @@
 #!/bin/bash
+rm `find ./|grep ".swp"`
 ls -d */|while read DIR;do cd $DIR;make clean;cd ..;done
