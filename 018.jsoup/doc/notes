@@ -1,0 +1,3 @@
+Jsoup: Server Side Dom Manipulation/Querying
+
+jsoup can be used to parse, extract, and manipulate data stored in HTML documents. (./res/jsoup.js and ./res/jsouptest.html)
