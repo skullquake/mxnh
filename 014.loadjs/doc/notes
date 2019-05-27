@@ -1,0 +1,3 @@
+Loading Javascript Libraries
+
+The load() function is used to load js libraries from urls. Here ./src/lib/home.js uses Underscore.js to template itself
