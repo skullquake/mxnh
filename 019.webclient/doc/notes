@@ -1,0 +1,3 @@
+Performing Web Requests
+
+Mendix provides com.mendix.core.Core.integration().executeHttpRequest() for performing web requests. You can use whatever library you want.
