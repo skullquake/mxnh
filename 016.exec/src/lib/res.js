@@ -32,6 +32,11 @@ try{
 					resource.size=gres[kdata].length<1024?gres[kdata].length+'b':gres[kdata].length<1024*1024?gres[kdata].length/1024+'k':gres[kdata].length/(1024*1024)+'M';
 					resource.hrefopen='/rhtest?cmd=resopen&key='+kdata;
 					resource.hrefdelete='/rhtest?cmd=resdel&key='+kdata;
+					if(glib.filename2mimetype(kdata)=='application/javascript'){
+						resource.hrefexec='/rhtest?cmd=resexec&key='+kdata;
+					}else{
+						resource.executable=false;
+					}
 					dat.resources.push(resource);
 				}catch(e){
 				}
@@ -85,6 +90,24 @@ try{
 		}
 		IOUtils.closeQuietly(os);
 	}
+	glib.resexec=function(req,res,os){
+		var k=req.getParameter("key");
+		if(k!=null&&k!=''){
+			try{
+				eval(
+					new java.lang.String(gres[k])
+				);
+			}catch(e){
+				res.setContentType('text/plain');
+				IOUtils.write(e,os);
+			}
+		}else{
+			res.setContentType('text/plain');
+			IOUtils.write('No Key',os);
+		}
+		IOUtils.closeQuietly(os);
+	}
+
 	glib.resput=function(req,res,os){
 		var method=(req.getHttpServletRequest().getMethod());
 		var k=req.getParameter("k");

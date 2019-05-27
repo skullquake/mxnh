@@ -26,6 +26,14 @@
 					</a>
 				</td>
 				<td>
+					<% if (typeof(resource.hrefexec) !== "undefined") { %>
+						<a href="<%= resource.hrefexec %>">
+							Execute
+						</a>
+					<% } %>
+				</td>
+
+				<td>
 					<a href="<%= resource.hrefdelete %>">
 						Delete
 					</a>
