@@ -1,3 +1,4 @@
 #!/bin/bash
 rm `find ./|grep ".swp"`
+rm `find ./|grep ".timestamp"`
 ls -d */|while read DIR;do cd $DIR;make clean;cd ..;done

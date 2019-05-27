@@ -1,0 +1,20 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3>
+			Welcome <%= name %>
+		</h3>
+		<ul>
+			<% links.forEach(function(link,linkidx) { %>
+				<li><a href="<%= link.href %>"><%= link.name %></a></li>
+			<% }); %>
+		</ul>
+	</body>
+</html>

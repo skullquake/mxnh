@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>
+			JVM
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3>
+			JVM
+		</h3>
+		<table>
+			<tr>
+				<td>
+					Total Memory:
+				</td>
+				<td>
+					<%= java.lang.Runtime.getRuntime().totalMemory()/1024/1024+" mb" %>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Free Memory:
+				</td>
+				<td>
+					<%= java.lang.Runtime.getRuntime().freeMemory()/1024/1024+" mb" %>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
