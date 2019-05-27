@@ -1,3 +1,4 @@
+HOST=http://192.168.2.228:8080
 HOST=https://nhutil-sandbox.mxapps.io
 BOOTENDPOINT=/main
 ENDPOINT=/main
