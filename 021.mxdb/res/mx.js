@@ -36,9 +36,7 @@ try{
 	ret.offset=offset;
 	ret.sort=sort;
 	if(arr.length>0){
-		ret.result=glib.mxserialize(arr,{getFileContents:true});// ./src/lib/mx.js utility json converter
-		//read contents
-		//todo...
+		ret.result=glib.mxserialize(arr,{getFileContents:true});// ./src/lib/mx.js utility json converter, also demos reading content
 	}else{
 		ret.result=arr.length;;//"NO RESULTS";
 	}
