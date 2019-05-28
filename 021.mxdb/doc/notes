@@ -1,3 +1,4 @@
 Mendix Database Functions
 
-./res/mx.js and ./src/lib/mx.js demonstrates mendix database functions
+Files ./res/mx.js and ./src/lib/mx.js demonstrates mendix database functions.
+We look at basic CRUD operations, as well as reading/writing to System.FileDocument derivatives.

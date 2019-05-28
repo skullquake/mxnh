@@ -7,6 +7,15 @@ try{
 	);
 	//alter field values
 	obj.setValue(root.getContext(),'Name','Test');
+	//populate contents
+	com.mendix.core.Core.storeFileDocumentContent(
+		root.getContext(),
+		obj,
+		obj.getValue(root.getContext(),'Name'),
+		new java.io.ByteArrayInputStream(
+			new java.lang.String("Lorem ipsum").getBytes(java.nio.charset.StandardCharsets.UTF_8)
+		)
+	);
 	//commit object
 	com.mendix.core.Core.commit(root.getContext(),obj);
 	//retrieve objects
@@ -27,7 +36,9 @@ try{
 	ret.offset=offset;
 	ret.sort=sort;
 	if(arr.length>0){
-		ret.result=glib.mxserialize(arr);// ./src/lib/mx.js utility json converter
+		ret.result=glib.mxserialize(arr,{getFileContents:true});// ./src/lib/mx.js utility json converter
+		//read contents
+		//todo...
 	}else{
 		ret.result=arr.length;;//"NO RESULTS";
 	}
