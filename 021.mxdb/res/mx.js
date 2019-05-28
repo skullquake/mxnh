@@ -16,7 +16,10 @@ try{
 	var sort={"createdDate":"DESC"};
 	var arr=com.mendix.core.Core.retrieveXPathQuery(
 		root.getContext(),
-		xpath
+		xpath,
+		pagesize,
+		offset,
+		sort
 	);
 	var ret={};
 	ret.xpath=xpath;
