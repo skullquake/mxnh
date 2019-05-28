@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Jsoup Test
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3 id="title">
+			Jsoup Test
+		</h3>
+		<div>
+			<ul id="ul">
+			</ul>
+		</div>
+		<p id="p">
+		</p>
+		<script type="text/nashorn">
+			var title=doc.select("#title").first();
+			title.text("Jsoup Test");
+			var TextNode=cl.loadClass("org.jsoup.nodes.TextNode");
+			var ul=doc.select("#ul").first();
+			for(var i=0;i<8;i++){
+				ul.appendElement("li").text('test'+i);
+			}
+			var p=doc.select("#p").first();
+			var tn=TextNode.getConstructor(java.lang.String.class).newInstance('Lorem ipsum');
+			p.appendChild(tn);
+		</script>
+	</body>
+</html>
