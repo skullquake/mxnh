@@ -38,7 +38,7 @@ try{
 	if(arr.length>0){
 		ret.result=glib.mxserialize(arr,{getFileContents:true});// ./src/lib/mx.js utility json converter, also demos reading content
 	}else{
-		ret.result=arr.length;;//"NO RESULTS";
+		ret.result="NO RESULTS";
 	}
 	//delete objects
 	com.mendix.core.Core.delete(root.getContext(),arr);
