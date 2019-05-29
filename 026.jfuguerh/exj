@@ -3,7 +3,7 @@ HOST=https://nhutil-sandbox.mxapps.io
 ENDPOINT=/rhtest
 URL=$HOST$ENDPOINT
 CURL=curl
-SRC=./res/jfugue.js
+SRC=./res/jfugue2.js
 $CURL \
 	--insecure \
 	$URL \
