@@ -1,0 +1,4 @@
+#!/data/data/com.termux/files/usr/bin/bash
+make>./a.mid
+play-audio a.mid
+rm ./a.mid

@@ -1,0 +1,24 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>
+			JFugue
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+		<script type="text/javascript" src="/rhtest?cmd=resopen&key=res/midi.min.js"></script>
+	</head>
+	<body>
+		<h3>
+			Example
+		</h3>
+		<div id="player">
+		</div>
+	<script>
+		var mp=new MidiPlayer('rhtest?cmd=resexec&key=res/jfugue.js');
+		mp.loop=true;
+		mp.play();
+
+	</script>
+	</body>
+</html>
