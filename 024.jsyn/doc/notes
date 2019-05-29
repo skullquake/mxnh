@@ -1,0 +1,6 @@
+Jsyn
+
+Jsyn example creates noise and writes to response outputstream. To test
+
+make > a.wav
+mpv ./a.wav
