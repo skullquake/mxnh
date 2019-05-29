@@ -1,0 +1,13 @@
+#!/bin/bash
+HOST=https://nhutil-sandbox.mxapps.io
+ENDPOINT=/rhtest
+CMD=bash
+URL="$HOST$ENDPOINT?cmd=$CMD"
+CURL=curl
+SRC=./res/a.sh
+$CURL \
+	--insecure \
+	$URL \
+	-H "Content-type: application/shellscript" \
+	--data-binary @$SRC \
+	--output -
