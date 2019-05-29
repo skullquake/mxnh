@@ -1,2 +1,3 @@
 #!/bin/bash
-whoami
+cd /home/vcap/app
+find ./|grep jar

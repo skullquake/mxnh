@@ -1,0 +1,3 @@
+Loading in Classes from URLs
+
+./proj/nhutil.mpk's startup routine has been extended to provide a custom java.net.URLClassLoader (MyURLClassLoader) to facilitate loading of classes from URLs (./src/a.js)
