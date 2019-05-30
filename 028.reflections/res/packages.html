@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id='title'>
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3 id="title">
+		</h3>
+		<table>
+			<tr>
+				<th style="background:rgba(0,255,0,0.3">
+					Main
+				</th>
+				<th style="background:rgba(0,255,0,0.2">
+					This
+				</th>
+			</tr>
+			<tr>
+				<td style="background:rgba(0,255,0,0.2);vertical-align:top;">
+					<ul id="ul" style="background:unset">
+					</ul>
+				</td>
+				<td style="background:rgba(0,255,0,0.3);vertical-align:top;">
+					<ul id="ul2" style="background:unset">
+					</ul>
+				</td>
+			</tr>
+
+		<p id="p">
+		</p>
+		<script type="text/nashorn">
+			//--------------------------------------------------------------------------------
+			//util
+			//--------------------------------------------------------------------------------
+			function print(a){
+				org.apache.commons.io.IOUtils.write(a,os);
+				org.apache.commons.io.IOUtils.write('\n',os);
+			}
+			//--------------------------------------------------------------------------------
+			//classloading
+			//--------------------------------------------------------------------------------
+			var urls=[
+				'http://central.maven.org/maven2/com/google/guava/guava/20.0/guava-20.0.jar',
+			]
+			for(var urlidx=0;urlidx<urls.length;urlidx++){
+				urlClassLoader.addURL(
+					new java.net.URL(
+						urls[urlidx]
+					)
+				);
+			}
+				try{
+					//----------------------------------------
+					//imports
+					//----------------------------------------
+					//----------------------------------------
+					//code
+					//----------------------------------------
+					var title=doc.select("#title").first();
+					title.text("Packages");
+					var TextNode=cl.loadClass("org.jsoup.nodes.TextNode");
+
+					//for main classloader?
+
+					var ul=doc.select("#ul").first();
+					var path=com.google.common.reflect.ClassPath.from(java.lang.Thread.currentThread().getContextClassLoader());
+					var r=java.lang.Package.getPackages();
+					//var path=com.google.common.reflect.ClassPath.from(urlClassLoader);
+					for(var i=0;i<r.length;i++){
+						var li=ul.appendElement("li").text(r[i].getName());
+						var tlc=path.getTopLevelClassesRecursive(r[i].getName())
+						var ul2=ul.appendElement("ul");
+						tlc.forEach(
+							function(a,b){
+								try{
+									var li2=ul2.appendElement("li").text(a);///tlc.get(j));
+								}catch(e){
+								}
+							}
+						)
+					};
+					//for this classloader
+					var clKlass=urlClassLoader.getClass();
+					while(clKlass!=java.lang.ClassLoader.class){
+						clKlass=clKlass.getSuperclass();
+					}
+					try{
+						var fldClasses=clKlass.getDeclaredField('classes');//java.lang.reflect.Field
+						fldClasses.setAccessible(true);
+						var classes=fldClasses.get(urlClassLoader);
+						var ul2=doc.select("#ul2").first();
+						classes.forEach(
+							function(c,cidx){
+								var li=ul2.appendElement("li").text(c.getName());
+							}
+						);
+					}catch(e){
+						print(e);
+					}
+					var p=doc.select("#p").first();
+					var tn=TextNode.getConstructor(java.lang.String.class).newInstance('Lorem ipsum');
+				}catch(e){
+					print(e);
+				}
+		</script>
+	</body>
+</html>

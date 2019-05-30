@@ -191,12 +191,14 @@ function ex05(){
 
 }
 
-
+/*
 ex00();
 ex01();
 ex02();
 ex03();
 ex04();
 ex05();
+*/
+eval(args);
 org.apache.commons.io.IOUtils.closeQuietly(os);
 

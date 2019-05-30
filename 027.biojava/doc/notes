@@ -1,5 +1,2 @@
-Accessing the Shell
+BioJava
 
-./src/lib/bash.js attaches glib.bash. Performing a POST operation to $HOST$ENDPOINT?cmd=bash will result in the body being executed by the shell and the output of the shell script will returned
-
-./exs is provided and set to execute ./res/a.sh on the server
