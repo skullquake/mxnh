@@ -1,3 +1,11 @@
 Reflections
 
-Java runtime metadata analysis
+Java runtime metadata analysis. Also, glib.resexec and glib.exec now has args.
+These args are placed in the execution context and can be evaluated, parsed to
+JSON or be utilized in some other way
+
+GET request
+?cmd=resexec&key=res/biojava.js&args=ex00();ex01();ex02();IOUtils.write('done\n',os);
+
+POST request
+?cmd=exec&key=res/biojava.js&args=ex00();ex01();ex02();IOUtils.write('done\n',os);
