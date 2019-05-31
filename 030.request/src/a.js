@@ -5,6 +5,13 @@
 //--------------------------------------------------------------------------------
 //util
 //--------------------------------------------------------------------------------
+function print(a){
+	try{
+		IOUtils.write(a,os);
+		IOUtils.write('\n',os);
+	}catch(e){
+	}
+}
 function getMethods(c){
     var r={};
     try{
@@ -50,16 +57,41 @@ function getMethodsByObject(c){
 //--------------------------------------------------------------------------------
 //code
 //--------------------------------------------------------------------------------
-;
-IOUtils.write(
+print(
 	JSON.stringify(
 		getMethodsByObject(
 			req.class
 		),
 		'0',
 		'\t'
-	),
-	os
+	)
 );
+print('getParaemters:');
+print(req.getParameter('foo'));
+print('isFileUpload:');
+print(req.isFileUpload());
+print('getHeader:');
+print(req.getHeader('User-agent'));
+print('getHttpServletRequest:');
+print(req.getHttpServletRequest());
+print('getCookie:');
+print(req.getCookie(''));//??
+print('getResourcePath:');
+print(req.getResourcePath());
+print('getRequestString:');
+print(req.getRequestString());
+print('getRemoteAddr:');
+print(req.getRemoteAddr());
+print('getFileItemName:');
+try{
+	print(req.getFileItemName());
+}catch(e){
+	print(e);
+}
+print('createFingerprint:');
+print(req.createFingerprint());
+print('getContext:');
+print(req.getContext());
+print('getInputStream:');
+print(req.getInputStream());
 IOUtils.closeQuietly(os);
-
