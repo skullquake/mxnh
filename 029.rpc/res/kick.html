@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id='doctitle'>
+		</title>
+	</head>
+	<body>
+		<script type="text/nashorn">
+			var arr_lib=[
+					'https://jsoup.org/packages/jsoup-1.12.1.jar',
+					'https://nhutil-sandbox.mxapps.io/rhtest?cmd=resopen&key=res/kick/KickAss.jar'
+			];
+			var arr_js=[
+				'res/jquery/jquery.min.js',
+				//'res/jquery.terminal/2.4.1/jquery.terminal.min.js',
+				'res/main.js'
+			];
+			var arr_css=[
+				//'res/jquery.terminal/2.4.1/jquery.terminal.min.css',
+				'res/style.css'
+			];
+			arr_lib.forEach(
+				function(a,b){
+					urlClassLoader.addURL(
+						new java.net.URL(
+							a
+						)
+					);
+				}
+			);
+			arr_css.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('link')
+							.attr(
+								'rel',
+								'stylesheet'
+							)
+							.attr(
+								'href',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			arr_js.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('script')
+							.attr(
+								'src',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			doc.select("title").first().text('Kick');
+			var content=new org
+				.jsoup
+				.nodes
+				.Element('div')
+				.attr('id','content');
+			content.append(
+				new org
+					.jsoup
+					.nodes
+					.Element('div')
+					.attr('id','terminal')
+					.text('test')
+			);
+			doc.select("body").first().prepend(content);
+			//IOUtils.write(Java.type('kickass.KickAssembler'),os);
+	try{
+		var KickAssembler=Java.type('kickass.KickAssembler');
+		var k=new KickAssembler();
+		/*
+		var a=[
+			'--version'
+		];
+		try{
+			var kr=KickAssembler.main(a);
+			IOUtils.write(kr,os);
+		}catch(e){
+			IOUtils.write(e,os);
+			IOUtils.write('\n',os);
+		};
+		*/
+		IOUtils.write(
+			JSON.stringify(
+				glib.getMethodsByObject(
+					//Java.type('kickass.nonasm.c64.CharToPetsciiConverter').class
+					Java.type('kickass.AssemblerToolbox').class
+				),
+				0,
+				'\t'
+			),
+			os
+		);//.run(args);
+	}catch(e){
+		IOUtils.write(e,os);
+	}
+
+
+		</script>
+	</body>
+</html>
+
+

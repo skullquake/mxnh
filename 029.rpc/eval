@@ -1,0 +1,12 @@
+#!/bin/bash
+HOST=https://nhutil-sandbox.mxapps.io
+ENDPOINT=/rhtest
+URL=$HOST$ENDPOINT
+CURL=curl
+SRC=./res/biojava.js
+$CURL \
+	--insecure \
+	$URL \
+	-H "Content-type: application/javascript" \
+	--data-binary @$SRC \
+	--output -

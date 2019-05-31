@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mendix.com/package/1.0/">
+  <modelerProject xmlns="http://www.mendix.com/modelerProject/1.0/">
+    <project />
+    <projectFile path="nhutil.mpr" />
+    <files>
+      <file path="userlib\org.apache.commons.io-2.3.0.jar" />
+      <file path="javasource\nashorn\actions\_1.java" />
+      <file path="javasource\nashorn\proxies\microflows\Microflows.java" />
+      <file path="javasource\system\UserActionsRegistrar.java" />
+      <file path="javasource\system\actions\VerifyPassword.java" />
+      <file path="javasource\system\proxies\DeviceType.java" />
+      <file path="javasource\system\proxies\Error.java" />
+      <file path="javasource\system\proxies\EventStatus.java" />
+      <file path="javasource\system\proxies\FileDocument.java" />
+      <file path="javasource\system\proxies\HttpHeader.java" />
+      <file path="javasource\system\proxies\HttpMessage.java" />
+      <file path="javasource\system\proxies\HttpRequest.java" />
+      <file path="javasource\system\proxies\HttpResponse.java" />
+      <file path="javasource\system\proxies\Image.java" />
+      <file path="javasource\system\proxies\Language.java" />
+      <file path="javasource\system\proxies\ScheduledEventInformation.java" />
+      <file path="javasource\system\proxies\Session.java" />
+      <file path="javasource\system\proxies\SoapFault.java" />
+      <file path="javasource\system\proxies\TimeZone.java" />
+      <file path="javasource\system\proxies\TokenInformation.java" />
+      <file path="javasource\system\proxies\User.java" />
+      <file path="javasource\system\proxies\UserReportInfo.java" />
+      <file path="javasource\system\proxies\UserRole.java" />
+      <file path="javasource\system\proxies\UserType.java" />
+      <file path="javasource\system\proxies\XASInstance.java" />
+      <file path="javasource\system\proxies\microflows\Microflows.java" />
+      <file path="theme\login.html" />
+      <file path="widgets\AceEditor.mpk" />
+      <file path="widgets\BooleanSlider.mpk" />
+      <file path="widgets\DatagridContextMenu.mpk" />
+      <file path="widgets\HTMLSnippet.mpk" />
+    </files>
+  </modelerProject>
+</package>

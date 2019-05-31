@@ -51,6 +51,8 @@ try{
 				'is':req.getInputStream(),
 				'args':args?args:null,
 				'IOUtils':IOUtils,
+				'glib':glib,
+				'gres':gres,
 				'urlClassLoader':urlClassLoader
 			};
 			var e=engine.getFactory().getScriptEngine(urlClassLoader);//ByName("nashorn");
@@ -96,6 +98,8 @@ try{
 									'cl':cl,
 									'doc':doc,
 									'IOUtils':IOUtils,
+									'glib':glib,
+									'gres':gres,
 									'this':a,
 									'urlClassLoader':urlClassLoader
 								}

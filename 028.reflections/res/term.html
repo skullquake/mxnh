@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id='doctitle'>
+		</title>
+	</head>
+	<body>
+		<script type="text/nashorn">
+			urlClassLoader.addURL(
+				new java.net.URL(
+					'https://jsoup.org/packages/jsoup-1.12.1.jar'
+				)
+			);
+			var arr_js=[
+				'res/jquery/jquery.min.js',
+				'res/jquery.terminal/2.4.1/jquery.terminal.min.js',
+				'res/main.js'
+			];
+			var arr_css=[
+				'res/jquery.terminal/2.4.1/jquery.terminal.min.css',
+				'res/style.css'
+			];
+			arr_css.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('link')
+							.attr(
+								'rel',
+								'stylesheet'
+							)
+							.attr(
+								'href',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+
+			arr_js.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('script')
+							.attr(
+								'src',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			doc.select("title").first().text('Terminal');
+			var content=new org
+				.jsoup
+				.nodes
+				.Element('div')
+				.attr('id','content');
+			content.append(
+				new org
+					.jsoup
+					.nodes
+					.Element('div')
+					.attr('id','terminal')
+			);
+			doc.select("body").first().prepend(content);
+		</script>
+		<script>
+			$(function(){
+				$('#terminal').terminal();
+			});
+		</script>
+	</body>
+</html>
+
+
+
+

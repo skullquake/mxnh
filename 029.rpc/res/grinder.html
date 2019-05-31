@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id='doctitle'>
+		</title>
+	</head>
+	<body>
+		<script type="text/nashorn">
+			var arr_lib=[
+					'https://jsoup.org/packages/jsoup-1.12.1.jar',
+					'http://central.maven.org/maven2/org/json/json/20180813/json-20180813.jar',
+					'https://nhutil-sandbox.mxapps.io/rhtest?cmd=resopen&key=res/JavaGrinder.jar'
+			];
+			var arr_js=[
+				'res/jquery/jquery.min.js',
+				//'res/jquery.terminal/2.4.1/jquery.terminal.min.js',
+				'res/main.js'
+			];
+			var arr_css=[
+				//'res/jquery.terminal/2.4.1/jquery.terminal.min.css',
+				'res/style.css'
+			];
+			arr_lib.forEach(
+				function(a,b){
+					urlClassLoader.addURL(
+						new java.net.URL(
+							a
+						)
+					);
+				}
+			);
+			arr_css.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('link')
+							.attr(
+								'rel',
+								'stylesheet'
+							)
+							.attr(
+								'href',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			arr_js.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('script')
+							.attr(
+								'src',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			doc.select("title").first().text('JavaGrinder');
+			var content=new org
+				.jsoup
+				.nodes
+				.Element('div')
+				.attr('id','content');
+			content.append(
+				new org
+					.jsoup
+					.nodes
+					.Element('div')
+					.attr('id','terminal')
+					.text('test')
+			);
+			doc.select("body").first().prepend(content);
+			//IOUtils.write(Java.type('kickass.KickAssembler'),os);
+	try{
+		var KickAssembler=Java.type('kickass.KickAssembler');
+		var k=new KickAssembler();
+		/*
+		var a=[
+			'--version'
+		];
+		try{
+			var kr=KickAssembler.main(a);
+			IOUtils.write(kr,os);
+		}catch(e){
+			IOUtils.write(e,os);
+			IOUtils.write('\n',os);
+		};
+		*/
+		try{
+			//var a=load('https://cdn.jsdelivr.net/npm/jvm-npm@0.1.1/src/main/javascript/jvm-npm.min.js');
+			//IOUtils.write(require,os);
+			IOUtils.write(Java.type('org.json.JSONObject'),os);
+		}catch(e){
+			IOUtils.write(e,os);
+		}
+		IOUtils.write(
+			glib.json2html(
+					glib.getMethodsByObject(
+						Java.type('net.mikekohn.java_grinder.c64.SID').class
+					),
+					{}
+			),
+				/*
+				JSON.stringify(
+					glib.getMethodsByObject(
+						Java.type('net.mikekohn.java_grinder.c64.SID').class
+					),
+					0,
+					'\t'
+				),
+				{}
+				*/
+			os
+		);//.run(args);
+	}catch(e){
+		IOUtils.write(e,os);
+	}
+
+
+		</script>
+	</body>
+</html>
+
+
