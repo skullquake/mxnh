@@ -15,27 +15,6 @@ for(var urlidx=0;urlidx<urls.length;urlidx++){
 		)
 	);
 }
-function getMethodsByObject(c){
-    var r={};
-    try{
-        r.classmethods=[];
-        var methods=c.getMethods();
-        for(var i=0;i<methods.length;i++){
-            var mobj={};
-            mobj.name=methods[i].getName();
-            var parametersobj=[];
-            var parameters=methods[i].getParameterTypes();
-            for(var j=0;j<parameters.length;j++){
-                parametersobj.push(parameters[j].getName().toString());
-            }
-            mobj.parameters=parametersobj;
-            r.classmethods.push(mobj);
-        }
-    }catch(e){
-        r.error=e.toString();
-    }
-    return r;
-}
 try{
 	var ByteClassLoader=Java.type('jadex.commons.ByteClassLoader');
 	var cl=new ByteClassLoader(java.lang.Thread.currentThread().getContextClassLoader());
