@@ -1,0 +1,2 @@
+#!/data/data/com.termux/files/usr/bin/bash
+dalvikvm -cp ./src/A.dex A

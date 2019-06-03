@@ -1,0 +1,121 @@
+dalvikvm: [options] class [argument ...]
+
+The following standard options are supported:
+  -classpath classpath (-cp classpath)
+  -Dproperty=value
+  -verbose:tag ('gc', 'jit', 'jni', or 'class')
+  -showversion
+  -help
+  -agentlib:jdwp=options
+
+The following extended options are supported:
+  -Xrunjdwp:<options>
+  -Xbootclasspath:bootclasspath
+  -Xcheck:tag  (e.g. 'jni')
+  -XmsN (min heap, must be multiple of 1K, >= 1MB)
+  -XmxN (max heap, must be multiple of 1K, >= 2MB)
+  -XssN (stack size)
+  -Xint
+
+The following Dalvik options are supported:
+  -Xzygote
+  -Xjnitrace:substring (eg NativeClass or nativeMethod)
+  -Xstacktracefile:<filename>
+  -Xgc:[no]preverify
+  -Xgc:[no]postverify
+  -XX:HeapGrowthLimit=N
+  -XX:HeapMinFree=N
+  -XX:HeapMaxFree=N
+  -XX:NonMovingSpaceCapacity=N
+  -XX:HeapTargetUtilization=doublevalue
+  -XX:ForegroundHeapGrowthMultiplier=doublevalue
+  -XX:LowMemoryMode
+  -Xprofile:{threadcpuclock,wallclock,dualclock}
+  -Xjitthreshold:integervalue
+
+The following unique to ART options are supported:
+  -Xgc:[no]preverify_rosalloc
+  -Xgc:[no]postsweepingverify_rosalloc
+  -Xgc:[no]postverify_rosalloc
+  -Xgc:[no]presweepingverify
+  -Ximage:filename
+  -Xbootclasspath-locations:bootclasspath
+     (override the dex locations of the -Xbootclasspath files)
+  -XX:+DisableExplicitGC
+  -XX:ParallelGCThreads=integervalue
+  -XX:ConcGCThreads=integervalue
+  -XX:MaxSpinsBeforeThinLockInflation=integervalue
+  -XX:LongPauseLogThreshold=integervalue
+  -XX:LongGCLogThreshold=integervalue
+  -XX:DumpGCPerformanceOnShutdown
+  -XX:DumpJITInfoOnShutdown
+  -XX:IgnoreMaxFootprint
+  -XX:UseTLAB
+  -XX:BackgroundGC=none
+  -XX:LargeObjectSpace={disabled,map,freelist}
+  -XX:LargeObjectThreshold=N
+  -XX:DumpNativeStackOnSigQuit=booleanvalue
+  -Xmethod-trace
+  -Xmethod-trace-file:filename  -Xmethod-trace-file-size:integervalue
+  -Xenable-profiler
+  -Xprofile-filename:filename
+  -Xprofile-period:integervalue
+  -Xprofile-duration:integervalue
+  -Xprofile-interval:integervalue
+  -Xprofile-backoff:doublevalue
+  -Xprofile-start-immediately
+  -Xprofile-top-k-threshold:doublevalue
+  -Xprofile-top-k-change-threshold:doublevalue
+  -Xprofile-type:{method,stack}
+  -Xprofile-max-stack-depth:integervalue
+  -Xcompiler:filename
+  -Xcompiler-option dex2oat-option
+  -Ximage-compiler-option dex2oat-option
+  -Xpatchoat:filename
+  -Xusejit:booleanvalue
+  -Xjitinitialsize:N
+  -Xjitmaxsize:N
+  -Xjitwarmupthreshold:integervalue
+  -Xjitosrthreshold:integervalue
+  -Xjitprithreadweight:integervalue
+  -X[no]relocate
+  -X[no]dex2oat (Whether to invoke dex2oat on the application)
+  -X[no]image-dex2oat (Whether to create and use a boot image)
+  -Xno-dex-file-fallback (Don't fall back to dex files without oat files)
+  -Xexperimental:lambdas (Enable new and experimental dalvik opcodes and semantics)
+
+The following previously supported Dalvik options are ignored:
+  -ea[:<package name>... |:<class name>]
+  -da[:<package name>... |:<class name>]
+   (-enableassertions, -disableassertions)
+  -esa
+  -dsa
+   (-enablesystemassertions, -disablesystemassertions)
+  -Xverify:{none,remote,all,softfail}
+  -Xrs
+  -Xint:portable, -Xint:fast, -Xint:jit
+  -Xdexopt:{none,verified,all,full}
+  -Xnoquithandler
+  -Xjniopts:{warnonly,forcecopy}
+  -Xjnigreflimit:integervalue
+  -Xgc:[no]precise
+  -Xgc:[no]verifycardtable
+  -X[no]genregmap
+  -Xverifyopt:[no]checkmon
+  -Xcheckdexsum
+  -Xincludeselectedop
+  -Xjitop:hexopvalue[-endvalue][,hexopvalue[-endvalue]]*
+  -Xincludeselectedmethod
+  -Xjitblocking
+  -Xjitmethod:signature[,signature]* (eg Ljava/lang/String\;replace)
+  -Xjitclass:classname[,classname]*
+  -Xjitcodecachesize:N
+  -Xjitoffset:offset[,offset]
+  -Xjitconfig:filename
+  -Xjitcheckcg
+  -Xjitverbose
+  -Xjitprofile
+  -Xjitdisableopt
+  -Xjitsuspendpoll
+  -XX:mainThreadStackSize=N
+
