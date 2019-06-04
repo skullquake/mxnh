@@ -61,7 +61,7 @@ try{
 	glib.resopen=function(req,res,os){
 		var k=req.getParameter("key");
 		if(k!=null&&k!=''){
-			res.setContentType('text/plain');
+			res.setContentType('text/html');
 			try{
 				IOUtils.write(
 					globaldata[k],
