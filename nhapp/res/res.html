@@ -1,0 +1,51 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>
+			<%= title %>
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3>
+			<a href="/rhtest">Home</a> Resources
+		</h3>
+		<table>
+			<% resources.forEach(function(resource,resourceidx) { %>
+			<tr>
+				<td>
+					<%= resource.name %>
+				</td>
+				<td>
+					<%= resource.size %>
+				</td>
+				<td>
+					<a href="<%= resource.hrefopen %>">
+						Open
+					</a>
+				</td>
+				<td>
+					<% if (typeof(resource.hrefexec) !== "undefined") { %>
+						<a href="<%= resource.hrefexec %>">
+							Execute
+						</a>
+					<% } %>
+				</td>
+
+				<td>
+					<a href="<%= resource.hrefdelete %>">
+						Delete
+					</a>
+				</td>
+
+			</tr>
+			<% }); %>
+		</table>
+		<p>
+			<a href="<%= hrefClear %>">
+				Clear All
+			</a>
+		</p>
+	</body>
+</html>

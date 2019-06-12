@@ -1,0 +1,33 @@
+<DOCTYPE! html>
+<html>
+	<head>
+		<title>
+			Web Requests
+		</title>
+		<link rel="stylesheet" href="/rhtest?cmd=resopen&key=res/style.css"></link>
+		<script src="/rhtest?cmd=resopen&key=res/main.js"></script>
+	</head>
+	<body>
+		<h3>
+			<a href="/rhtest">Home</a> Web Requests
+		</h3>
+		<table>
+			<tr>
+				<td style="vertical-align:top;font-weight:bold;background:rgba(0,255,0,0.2);">
+					Get Response
+				</td>
+				<td style="font-family:monospace;white-space:pre;background:rgba(0,255,0,0.5);">
+					<%= ret_get %>
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align:top;font-weight:bold;background:rgba(0,255,0,0.2);">
+					Post Response
+				</td>
+				<td style="font-family:monospace;white-space:pre;background:rgba(0,255,0,0.5);">
+					<%= ret_post %>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>

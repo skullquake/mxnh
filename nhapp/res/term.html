@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title id='doctitle'>
+		</title>
+	</head>
+	<body>
+		<script type="text/nashorn">
+			var arr_lib=[
+					'https://jsoup.org/packages/jsoup-1.12.1.jar'
+			];
+			var arr_js=[
+				'res/jquery/jquery.min.js',
+				'res/jquery.terminal/2.4.1/jquery.terminal.min.js',
+				'res/main.js'
+			];
+			var arr_css=[
+				'res/jquery.terminal/2.4.1/jquery.terminal.min.css',
+				//'res/style.css'
+			];
+			arr_lib.forEach(
+				function(a,b){
+					urlClassLoader.addURL(
+						new java.net.URL(
+							a
+						)
+					);
+				}
+			);
+			arr_css.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('link')
+							.attr(
+								'rel',
+								'stylesheet'
+							)
+							.attr(
+								'href',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			arr_js.forEach(
+				function(a,b){
+					doc.select("head").first().append(
+						new org
+							.jsoup
+							.nodes
+							.Element('script')
+							.attr(
+								'src',
+								'rhtest?cmd=resopen&key='+a
+							)
+					);
+				}
+			);
+			doc.select("title").first().text('Terminal');
+			var content=new org
+				.jsoup
+				.nodes
+				.Element('div')
+				.attr('id','content');
+			content.append(
+				new org
+					.jsoup
+					.nodes
+					.Element('div')
+					.attr('id','terminal')
+			);
+			doc.select("body").first().prepend(content);
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				//$('#terminal').terminal();
+							$('#terminal').terminal(
+								{
+									help:function(){
+										this.echo("internal commands: reload, fullscreen");
+										this.echo("available shells: js, rpc, eval, nh");
+									},
+									rpc:'rhtest?cmd=jsonrpc',
+									reload:function(){
+										location.reload();
+									},
+									js:function(){
+										this.push(
+											function(command,term) {
+												var result=window.eval(command);
+												if(result!=undefined){
+													term.echo(String(result));
+												}
+											},
+											{
+												name:'js',
+												prompt:'js>'
+											}
+										);
+									},
+									eval:function(){
+										this.push(
+											function(command,term) {
+												var result=window.eval(command);
+												if(result!=undefined){
+													term.echo(String(result));
+												}
+											},
+											{
+												name:'js',
+												prompt:'js>'
+											}
+										);
+									},
+									nh:function(){
+										this.push(
+											function(command,term) {
+												var result=window.eval(command);
+												if(result!=undefined){
+													term.echo(String(result));
+												}
+											},
+											{
+												name:'js',
+												prompt:'js>'
+											}
+										);
+									},
+									fullscreen:function(){
+										document.body.requestFullscreen();
+									},
+									greetings:
+										" __  __       ____                      _      \n"+
+										"|  \\/  |_  __/ ___|___  _ __  ___  ___ | | ___ \n"+
+										"| |\\/| \\ \\/ / |   / _ \\| '_ \\/ __|/ _ \\| |/ _ \\\n"+
+										"| |  | |>  <| |__| (_) | | | \\__ \\ (_) | |  __/\n"+
+										"|_|  |_/_/\\_\\\\____\\___/|_| |_|___/\\___/|_|\\___|\n"
+								}
+							);
+			});
+		</script>
+	</body>
+</html>
+
+

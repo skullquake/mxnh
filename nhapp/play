@@ -1,0 +1,14 @@
+#!/data/data/com.termux/files/usr/bin/bash
+HOST=https://nhutil-sandbox.mxapps.io
+ENDPOINT=/rhtest
+URL=$HOST$ENDPOINT
+CURL=curl
+SRC=./res/jfugue.js
+$CURL \
+	--insecure \
+	$URL \
+	-H "Content-type: application/javascript" \
+	--data-binary @$SRC \
+	--output - > a.mid
+play-audio ./a.mid
+rm ./a.mid
