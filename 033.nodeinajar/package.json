@@ -1,0 +1,27 @@
+{
+  "name": "033.nodeinajar",
+  "version": "1.0.0",
+  "description": "This is an experimental nodejs combined with java project ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skullquake/mxnh.git"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "java",
+    "nashorn",
+    "avatar",
+    "jar"
+  ],
+  "author": "skullquake & cortnox",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skullquake/mxnh/issues"
+  },
+  "homepage": "https://github.com/skullquake/mxnh#readme"
+}
