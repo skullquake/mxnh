@@ -1,4 +1,4 @@
-HOST=https://nhutil-sandbox.mxapps.io
+HOST=https://v7235-sandbox.mxapps.io
 BOOTENDPOINT=/main
 ENDPOINT=/main
 EXECENDPOINT=/rhtest

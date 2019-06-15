@@ -1,0 +1,535 @@
+{
+	"classmethods": [
+		{
+			"name": "offset",
+			"parameters": []
+		},
+		{
+			"name": "execute",
+			"parameters": [
+				"com.mendix.systemwideinterfaces.core.IContext"
+			]
+		},
+		{
+			"name": "setOffset",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "setOffset",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "depth",
+			"parameters": []
+		},
+		{
+			"name": "amount_$eq",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "offset_$eq",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "shouldRetrieveCount_$eq",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "disableSecurity_$eq",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "schema_$eq",
+			"parameters": [
+				"scala.Option"
+			]
+		},
+		{
+			"name": "$anonfun$getSorting$1",
+			"parameters": [
+				"scala.Tuple2"
+			]
+		},
+		{
+			"name": "$anonfun$setRetrievalSchema$1",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$1",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$2",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$3",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$4",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$5",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$6",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$7",
+			"parameters": [
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "$anonfun$setVariable$8",
+			"parameters": []
+		},
+		{
+			"name": "$anonfun$setVariable$9",
+			"parameters": []
+		},
+		{
+			"name": "depth_$eq",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "schema",
+			"parameters": []
+		},
+		{
+			"name": "setDisableSecurity",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "setDisableSecurity",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"double"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"int"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"int"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"double"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"double"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"long"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"long"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"int"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"int"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.math.BigDecimal"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.math.BigDecimal"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.math.BigDecimal"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.math.BigDecimal"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"double"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixIdentifier"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.lang.String"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.lang.String"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.lang.String"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.lang.String"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"int"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"double"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.math.BigDecimal"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"long"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixObject"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"long"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"long"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"java.lang.String"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixIdentifier"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixIdentifier"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixIdentifier"
+			]
+		},
+		{
+			"name": "setVariable",
+			"parameters": [
+				"java.lang.String",
+				"com.mendix.systemwideinterfaces.core.IMendixIdentifier"
+			]
+		},
+		{
+			"name": "setRetrievalSchema",
+			"parameters": [
+				"com.mendix.systemwideinterfaces.connectionbus.requests.IRetrievalSchema"
+			]
+		},
+		{
+			"name": "setRetrievalSchema",
+			"parameters": [
+				"com.mendix.systemwideinterfaces.connectionbus.requests.IRetrievalSchema"
+			]
+		},
+		{
+			"name": "shouldRetrieveCount",
+			"parameters": []
+		},
+		{
+			"name": "setAmount",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "setAmount",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "amount",
+			"parameters": []
+		},
+		{
+			"name": "sorts",
+			"parameters": []
+		},
+		{
+			"name": "addSort",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "addSort",
+			"parameters": [
+				"java.lang.String",
+				"boolean"
+			]
+		},
+		{
+			"name": "setDepth",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "setDepth",
+			"parameters": [
+				"int"
+			]
+		},
+		{
+			"name": "variables",
+			"parameters": []
+		},
+		{
+			"name": "disableSecurity",
+			"parameters": []
+		},
+		{
+			"name": "setShouldRetrieveCount",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "setShouldRetrieveCount",
+			"parameters": [
+				"boolean"
+			]
+		},
+		{
+			"name": "wait",
+			"parameters": [
+				"long",
+				"int"
+			]
+		},
+		{
+			"name": "wait",
+			"parameters": [
+				"long"
+			]
+		},
+		{
+			"name": "wait",
+			"parameters": []
+		},
+		{
+			"name": "equals",
+			"parameters": [
+				"java.lang.Object"
+			]
+		},
+		{
+			"name": "toString",
+			"parameters": []
+		},
+		{
+			"name": "hashCode",
+			"parameters": []
+		},
+		{
+			"name": "getClass",
+			"parameters": []
+		},
+		{
+			"name": "notify",
+			"parameters": []
+		},
+		{
+			"name": "notifyAll",
+			"parameters": []
+		}
+	]
+}

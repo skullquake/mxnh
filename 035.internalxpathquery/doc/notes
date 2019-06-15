@@ -1,0 +1,3 @@
+com.mendix.basis.action.InternalXPathQuery
+
+InternalXPathQuery provides a more controlled way of building XPath queries, as an alternative to com.mendix.core.Core.retrieveXPathQuery
